@@ -1,0 +1,14 @@
+Step 1 :
+
+import { useReducer } from "react"
+ 
+
+step 2: 
+
+    const [state , dispatch] = useReducer(reducer , initialState);
+
+state  - manage more diffrent state
+initialState - (value) , - > array or object for storing initial state , coz it have lot of state.
+
+dispatch , reducer - function
+
