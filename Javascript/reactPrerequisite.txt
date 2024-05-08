@@ -1,0 +1,146 @@
+Destructuring makes it easy to extract only what is needed.
+
+const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car, truck, suv] = vehicles;
+
+const [car ,, suv] = vehicles  - without second one
+
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+myVehicle(vehicleOne)
+
+function myVehicle({ model, registration: { state } }) {  -- > for nested Destructuring
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+}
+
+----------------------------------------------------
+
+Export and Import
+
+Export 
+    - Named Export - can have many named Export
+
+        const name = "Jesse"
+        const age = 40
+        export { name, age }
+
+    - Default Export - file should have one default.
+
+        const message = () => {
+            const name = "Jesse";
+            const age = 40;
+            return name + ' is ' + age + 'years old.';
+        };
+
+        export default message;
+
+Import
+
+    - Named Export - must be imported using { }  braces
+        import { name, age } from "./person.js";
+
+    - default export - no need
+        import message from "./message.js";
+
+--------------------------------------------------------
+
+Spread Operator - copy all or part of the existing array or object into another array or object
+
+Eg - copy all array 
+
+const numbers = [1,2,3,4,5,6,7]
+const copy = [...numbers];
+
+
+part of array 
+
+const numbers  = [1,2,3,4,5];
+const [one  , two , ...copy ] = numbers;
+const [...copy , one  , two ] = numbers; - > error ( Rest element must be last element )
+console.log(one , two , copy);
+
+
+-----------------------------------------------------------
+
+
+Before ES6 we can only declare variable using var ,  If you did not define them, they would be assigned to the global object. 
+
+var - global and function scope , if u use inside block then it will available outside block .
+var has a function scope, not a block scope.
+
+let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+let has a block scope.
+
+
+const is a variable that once it has been created, its value can never change.
+const has a block scope.
+
+Because of this you can NOT:
+
+    Reassign a constant value
+    Reassign a constant array
+    Reassign a constant object
+
+But you CAN:
+
+    Change the elements of constant array
+    Change the properties of constant object
+
+---------------------------------------------------
+
+
+Arrow Functions 
+    - Arrow functions allow us to write shorter function syntax.
+    - arrow functions there is no binding of this. the 'this' keyword always represents the object that defined the arrow function.
+
+
+---------------------------------------------------
+
+Class
+
+    - class name should start with caps - eg : Car , Vehicle.
+
+class Car {
+  constructor(name) {
+    this.brand = name;
+  }
+}
+
+const mycar = new Car("Ford");
+
+Note: The constructor function is called automatically when the object is initialized.
+
+
+Inheritance - extends keyword used to inheritance
+
+Correct : 
+    constructor(name, mod) {
+        super(name);
+        this.model = mod;
+    }  
+
+wrong:
+    onstructor(name, mod) {
+        this.model = mod;
+        super(name);  -> super() should be called first before assigning value for child class.
+    }  
+
+---------------------------------------------------------
+
+map 
+
+    - array.map(callback(currentValue, index, arr), thisValue).
+    - 

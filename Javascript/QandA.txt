@@ -1,0 +1,171 @@
+1. How to handle event bubbling in JavaScript?
+
+event bubbling 
+    - event propogate throught the hierarchy or nested elements in dom.
+    - event passes through the child -> parent -> parent -> ... -> top root element.
+
+eg: 
+    <div id="parent">
+        <div id="child1">
+            <div id="child2">
+                hello
+            </div>
+        </div>
+    </div>
+
+    document.getElementById('child2').addEventListener('click' , ()=>{
+        console.log("Child 2");
+    });
+    document.getElementById('parent').addEventListener('click' , ()=>{
+        console.log("Parent");
+    });
+    document.getElementById('child1').addEventListener('click' , ()=>{
+        console.log("Child 1");
+    });
+
+    output: 
+        Child 2
+        Child 1
+        Parent
+
+--------------------------------------------------------
+
+2. whats the output?
+
+ const person = {
+    name: "Alice",
+    greet: function(name) {
+        console.log(this.name + " says hi to " + name);
+    }
+};
+
+const names = ["Bob", "Charlie"];
+
+names.forEach(function(name) {
+person.greet(name); // Will not work as 'this' refers to the callback function
+}, person); // Set 'this' to 'person' object
+
+
+output: 
+    Alice says hi to Bob
+    Alice says hi to Charlie
+
+-----------------------------------------------------
+
+3. Difference between `Promise.all()` and `Promise.allSettled()`?
+
+Both give array of object.
+
+Success promise object have - status - fulfilled , value - " ... "
+Failure promise object have - status - rejected , reason - " ... "
+
+Promise.all() - it rejects if any one promise get rejected
+Promise.allSettled() - it returns array of objects , with both success and failure object.
+
+const promise1 = Promise.resolve("promise 1 resolved")
+    const promise2 = Promise.reject("promise 2 reject")
+
+    Promise.race([promise2 , promise1])
+    .then((results)=>{
+        console.log(results);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+    Promise.allSettled([promise2 , promise1])
+    .then((results)=>{
+
+        results.forEach((element , index , wholeArray) => {
+            console.log(element , index);
+            console.log(wholeArray);
+        });
+
+        console.log(results);
+    })
+
+
+----------------------------------------------
+
+4. Foreach syntax
+
+array.forEach(callback(element , index , wholearray ) , thisValue)
+
+-------------------------------------------------
+
+5. What is Set in JavaScript?
+
+Set is a js datastructure , its like array but it have only unique data , no key value pair.
+
+const roadmap = new Set();
+roadmap.add('JavaScript');
+roadmap.add('JavaScript');
+
+roadmap.add('dynamic');
+roadmap.add(1995);
+
+console.log(roadmap.size); // 3, because the value 'JavaScript' is already present in the set
+console.log(roadmap.has('JavaScript')); // true
+
+roadmap.delete('JavaScript');
+console.log(roadmap.has('JavaScript')); // false
+console.log(roadmap.size); // 2
+
+
+--------------------------------------------------------
+
+6. How to run a piece of code after a specific time interval?
+
+const intervalId = setInterval(() => {
+  console.log('Hello World');
+}, 1000);
+
+// Output:
+// Hello World
+// Hello World
+
+You can run some codes on interval using setInterval function in JavaScript. It accepts a function and a time interval in milliseconds.
+ It returns a unique id which you can use to clear the interval using clearInterval function.
+
+ ---------------------------------------------
+
+ 7. What is the purpose of the `async/await` in JavaScript?
+
+ Async / await introduced in ES2017 , for readable and cleaner way to handle asynchronous operations compared to callbacks and promises. 
+ An async function always returns a promise, and within such a function, you can use await to pause execution until a promise settles.
+
+ ---------------------------------
+
+ 8. Explain `alert()`, `prompt()`, and `confirm()` methods in JavaScript?
+
+ alert  - alert message - ok button
+ prompt  - to get input - ok - return the value , cancel - null 
+ confirm  - dialog box for confirmation - ok - true , cancel - false 
+
+ -------------------------------------------------
+
+ 9. How to use `filter()` method? 
+
+ takes function as argument and implement the condition inside that , 
+ if that condition pass then it put inside the new array and returns at last.
+
+ const numbers = [1, 2, 3, 4, 5, 6];
+
+const evenNumbers = numbers.filter((number) => {
+  return number % 2 === 0;
+});
+
+console.log(numbers); // [1, 2, 3, 4, 5, 6]
+console.log(evenNumbers); // [2, 4, 6]
+
+
+------------------------------------------------
+
+10 . What is the difference between `Map` and `WeakMap` in JavaScript?
+
+
+
+-------------------------------------
+
+
+https://roadmap.sh/questions/javascript

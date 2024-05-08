@@ -1,0 +1,43 @@
+Event - any action that we perform in the website using our system.
+handlers  - code to handle that event
+
+onclick
+onkeyup
+onkeypress
+
+let , var , const  - used to store Data. 
+ 
+const name = "balaji"; // cannot be changed
+
+var a = 10; // it can be re declared
+
+but in let we cannot re declare
+
+
+var a , let b , const name  - declaration
+
+let a = 10; // declared and initialized (assign)
+= - is assignment operator.
+
+a = 10;  - initialization or assignment
+---------------------------------------------------------
+2 scan
+
+first scan - for declaration or memory 
+second scan - for initialization
+
+
+Function statement  - hoisting works
+function add(){
+    console.log("this is add function");
+}
+add();
+
+
+Function expression - hoisting doesnt works
+var sub = function(){
+    console.log("this is sub function");
+}
+sub();
+
+------------------------

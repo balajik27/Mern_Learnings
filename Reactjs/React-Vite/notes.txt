@@ -1,0 +1,78 @@
+Step 1:
+
+npm install vite@latest appname
+
+then choose react
+
+Step 2 :
+
+npm run dev  - to run
+
+-----------------------------------------
+
+A JSX element is a combination of JavaScript code and HTML tags that describes what you’d like to display. 
+
+The default keyword tells other files using your code that it’s the main function in your file.
+
+Fragments (<> and </>) to wrap multiple adjacent JSX elements
+
+To “escape into JavaScript” from JSX, you need curly braces
+
+squares.slice(); - gives the copy of the array squares.
+
+Avoiding direct data mutation lets you keep previous versions of the data intact, and reuse them later.
+while array updation , takes copy of the array and update in it , then store in state.
+
+------------------------------------------------------------
+
+Step 1: Break the UI into a component hierarchy 
+
+    One such technique is the single responsibility principle, that is, a component should ideally only do one thing. 
+    If it ends up growing, it should be decomposed into smaller subcomponents.
+
+
+Step 2: Build a static version in React
+
+Step 3: Find the minimal but complete representation of UI state 
+
+    The most important principle for structuring state is to keep it DRY (Don’t Repeat Yourself).
+
+    Now think of all of the pieces of data in this example application:
+
+        The original list of products
+        The search text the user has entered
+        The value of the checkbox
+        The filtered list of products(compute it based on existing state)
+
+    Which of these are state? Identify the ones that are not:
+
+        Does it remain unchanged over time? If so, it isn’t state.
+        Is it passed in from a parent via props? If so, it isn’t state.
+        Can you compute it based on existing state or props in your component? If so, it definitely isn’t state!
+
+    Result for state:
+
+        The original list of products(data from parent as props , so not state)
+        The search text the user has entered(state)
+        The value of the checkbox(state)
+        The filtered list of products(compute it based on existing state , so not state) 
+
+Step 4: Identify where your state should live 
+
+    For each piece of state in your application:
+
+    1.Identify every component that renders something based on that state.
+    2. Find their closest common parent component—a component above them all in the hierarchy.
+    3. Decide where the state should live:
+        Often, you can put the state directly into their common parent.
+        You can also put the state into some component above their common parent.
+        If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common parent component.
+
+    Now let’s run through our strategy for them:
+
+        1. Identify components that use state: ProductTable  , SearchBar 
+        2. Find their common parent - FilterableProductTable
+        3. Decide where the state lives: FilterableProductTable
+
+Step 5: Add inverse data flow 
+

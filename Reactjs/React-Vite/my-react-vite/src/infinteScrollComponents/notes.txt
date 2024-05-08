@@ -1,0 +1,21 @@
+step 1 :
+
+import InfiniteScroll from "react-infinite-scroll-component";
+
+step 2:
+
+ <InfiniteScroll dataLength={dataSource.length}>
+
+       
+</InfiniteScroll>
+
+dataLength is import parament in InfiniteScroll, or page displays error or blank
+
+step 3:
+
+when user reach last of the content
+
+next={} in InfiniteScroll used to call the function to fetch data , here we should create function and pass to next={} and it call when 
+reaches end.
+
+hasMore() - 

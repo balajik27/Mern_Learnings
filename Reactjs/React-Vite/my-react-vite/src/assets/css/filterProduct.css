@@ -1,0 +1,24 @@
+.main_outer_card{
+    margin: 50px;
+    border: 1px solid #000;
+    width: 450px;
+
+}
+.search_box{
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.search_bar_box{
+    margin: 20px;
+}
+.table_box{
+    margin: 20px;
+}
+.table_head{
+    display: inline-block;
+    margin: 20px;
+}

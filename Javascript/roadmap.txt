@@ -1,0 +1,49 @@
+
+it have Global , functional scope but not block scope. 
+var x = 10;
+
+(function (){
+    var x = 20;
+    console.log(x);
+
+    if(true){
+        var x = 30;
+        console.log(x);
+    }
+    console.log(x);
+})();
+
+console.log(x);
+
+
+it have Global , functional and block scope.  
+cannot be re-declared within the same scope, but can be updated.
+let a = 10;
+
+(function (){
+    let a = 20;
+    console.log(a);
+
+    if(true){
+        let a = 30;
+        console.log(a);
+    }
+    console.log(a);
+})();
+
+console.log(a);
+
+
+CONST 
+it have Global , functional and block scope.  
+const must be initialized during declaration and cannot be reassigned or redeclared.
+ for objects and arrays declared with const, their properties and elements can still be modified, but the variable itself cannot be reassigned.
+
+function example() {
+    const arr = [1, 2, 3];
+    arr.push(4);
+    console.log(arr); // Output: [1, 2, 3, 4]
+}
+example();
+
+it's recommended to use const by default and only use let when you need to reassign a variable. Using var is discouraged in modern JavaScript development due to its lack of block scoping and other issues.

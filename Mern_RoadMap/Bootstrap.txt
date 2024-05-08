@@ -1,0 +1,60 @@
+Bootstrap
+
+container
+container-fluid
+row
+col
+col-xxl-xl-lg-md-sm
+
+gutters
+
+
+
+heading (h1 , h2 .. h6)
+text-muted
+display-1..6
+
+img-fluid
+
+
+form-label
+form-select
+form-control , form-control-lg , form-control-sm
+form-text
+form-check-input
+form-check-label
+
+accordian
+alerts
+modal
+navbar
+nav and tabs
+offcanvas
+
+
+spacing
+text
+background
+borders
+colors
+display
+flex
+opacity
+overflow
+position
+shadows
+
+
+text-decoration-none
+
+.cursor_pointer{
+    cursor : pointer !important;
+}
+
+ul{
+    padding:0
+}
+
+li{
+    list-style:none;
+}

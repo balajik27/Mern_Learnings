@@ -1,0 +1,107 @@
+variables - var(hoisting) , let , const.
+assignment , declaration.
+Hoisting
+scope - global , local.
+block , function , lexical scope.
+temporal dead zone.
+primitive and non primitive datatype.
+string , null , undefined , boolean , number - primitive
+objects , array - non primitive.
+typeof
+
+object prototype
+prototypal inheritance
+
+buildin property methods
+array buildin methods
+
+map - efficient , recommended
+type casting , explicit , implicit
+type conversion
+type coercion.
+
+
+DS
+
+indexed collection
+keyed collections
+map , weekmap , set , weak set
+
+structured data
+Json data
+
+equaity comparision
+strict and loose equality
+
+compare object? object.is()
+
+loops and iteration  - for , do while , while , 
+conditional
+
+for in , for of , break  , continue
+label statement
+
+exceptional handling
+throw , try , catch , finally
+
+error object
+
+expression operators - arithmetic , assignment , comparision , bitwise , logical , bigint , string , conditionals , comma , unary
+
+functions
+arrow function
+default and rest parameter.
+spread operator.
+
+function scoping - lexical scoping
+
+callback
+closure
+
+this keyword
+binding
+strict mode - old syntax not work
+
+ADVANCE
+
+setInterval
+setTimeout
+event loop
+async - callbacks , promises
+
+API
+xml http request(AJAX)
+fetch
+
+iterators and generators
+
+modules - import export
+
+memory lifecycle
+garbage collection
+
+chrome dev tools - hareesh vdo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

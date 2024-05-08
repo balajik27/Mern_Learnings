@@ -1,0 +1,162 @@
+1. How to render HTML in React?
+
+You can use dangerouslySetInnerHTML prop to render HTML in React. 
+It is used to set HTML directly from React. You should be careful while using this property as it can cause XSS attacks.
+
+_______________________________________________________________________________________________________________________________
+
+2. How do you investigate a slow React app and identify performance bottlenecks?
+
+There are many reasons why an app might be slow. It could be due to a slow network, a slow backend, or a slow client. It could also be due to a memory leak, unnecessary re-renders, or large bundle sizes.
+
+Here are some tips to help you investigate and fix performance issues:
+
+Use the React DevTools Profiler
+The React DevTools Profiler helps you visualize how components render and identify costly renderings. It can also help you identify unnecessary re-renders.
+
+Check for Unnecessary Renders
+Ensure that components don't render more often than needed. Be clear about the useEffect dependencies and avoid creating new objects or arrays every render, as these can trigger unnecessary child component renders. Tools like why-did-you-render can help spot unnecessary re-renders.
+
+Analyze Bundle Size
+Use your production build to analyze your bundle size. Tools like webpack-bundle-analyzer or source-map-explorer can help you see if large libraries or unused code is slowing down the initial load.
+
+Optimize Images & Assets
+Ensure images are appropriately sized and use modern formats. Also, consider using CDNs for assets that don't change often.
+
+Lazy Load Components
+Use lazy() and dynamic imports to split your bundle and load components only when they're needed. This can help reduce the initial load time.
+
+Check Network Requests
+Slow API calls or fetching large amounts of data can affect performance. Optimize your backend, paginate data, or cache results. You can also use tools like @tanstack/react-query or swr to help manage data fetching and caching.
+
+Use Production Build for Testing
+Ensure you're testing the performance on a production build, as development builds are often slower due to extra checks and logs.
+
+Regularly profiling and monitoring your app can help you spot and fix performance issues before they become significant problems. You can use tools like Lighthouse or Calibre to monitor your app's performance over time.
+
+_______________________________________________________________________________________________________________________________
+
+3. What could be the reasons for un-necessary re-renders in React?
+
+Unnecessary re-renders in components can occur due to several reasons, and it's important to optimize your code to minimize them for better performance.
+
+Here are some common reasons for unnecessary re-renders in functional components:
+
+Using inline functions in JSX props: If you pass an inline function as a prop to child components, those components will get re-rendered every time the parent component re-renders. This is because a new function is created on every render. You can optimize this by using useCallback hook to memoize the function.
+Using useState hook with objects: If you use useState hook with objects, you need to make sure that you are not mutating the object. If you mutate the object, React will not be able to detect the change and will not re-render the component. You can optimize this by using useReducer hook instead of useState hook.
+Using useEffect hook without dependencies: If you use useEffect hook without dependencies, it will run on every render. You can optimize this by passing an empty array as the second argument to useEffect hook.
+Parent Component Re-renders: If a parent component re-renders, all its child components will also re-render. You can optimize this by using React.memo to memoize the child component where possible.
+Global State Changes: If you use global state management libraries like Redux, MobX, etc., and the global state changes, all the components that use that state will re-render. You can optimize this by using useSelector hook to select only the state that you need in a component.
+Misusing Context: If you use Context API to pass data to child components, and the data changes, all the child components will re-render. You can optimize this by using useContext hook to select only the data that you need in a component.
+You can also use React.StrictMode to detect potential problems in your code that could cause unnecessary re-renders.
+
+
+____________________________________________________________________________________________________________________________
+
+
+4. How to lazy load components in React?
+
+5. How React Virtual DOM works?
+
+Virtual DOM works in this steps:
+
+Whenever any underlying data changes, new virtual DOM representation will be created.
+Then the difference between the previous DOM representation and the new one is calculated.
+Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+
+____________________________________________________________________________________________________________________________
+
+6. What are Server Components in React?
+
+7. What is `Suspense` in React?
+
+8. How do React Server Components handle data fetching?
+
+Server Components can directly access backend resources, databases, or filesystems to fetch data during rendering, eliminating the need for a separate API layer for data fetching.
+
+______________________________________________________________________________________________________________________________
+
+9. How to render a list in React?
+
+
+In React, you can render a list by using the JavaScript map function to iterate over an array of items and return a JSX element for each item. It's important to provide a unique key prop to each element in the list for React's diffing algorithm to function efficiently during re-renders. Here's a basic example:
+
+const items = ['Apple', 'Banana', 'Cherry'];
+
+function FruitList() {
+  return (
+    <ul>
+      {items.map((fruit, index) => (
+        <li key={index}>{fruit}</li>
+      ))}
+    </ul>
+  );
+}
+Note: While using the index as a key can work in some cases, it's generally not recommended for dynamic lists where items can be added, removed, or reordered.
+
+
+_____________________________________________________________________________
+
+
+10. What is a React?
+
+React, is an open-source JavaScript library for building user interfaces (UIs). It was developed and is maintained by Meta, and is widely used by developers to create interactive and dynamic web applications.
+
+___________________________________________________________________________
+
+11. What are fragments in React?
+
+React doesn't allow returning multiple elements from a component. You can use fragments to return multiple elements.
+
+Fragments in React allow for a group of elements to be returned from a component's render method without adding an extra node to the DOM. 
+They are useful when you want to return multiple elements without wrapping them in a parent container.
+
+___________________________________________________________________________________
+
+12. What are refs in React?
+
+Refs are used to get reference to a DOM node or an instance of a component. They help to access the DOM nodes or React elements created in the render method.
+ You can also use refs When you want a component to “remember” some information, but you don’t want that information to trigger new renders, you can use a ref.
+
+
+___________________________________________________________________________
+
+13. What is the naming convention for React components?
+
+In React, the naming convention for components is to use PascalCase, meaning the first letter of each word in the component's name should be capitalized. For example, UserProfile, SidebarItem, or NavigationMenu. This convention differentiates custom React components
+ from regular HTML tags in JSX, as React treats elements starting with a lowercase letter as DOM tags and those starting with a capital letter as custom components.
+
+
+________________________________________________________________________________
+
+14. How do Server Components differ from Client Components?
+
+Server Components are rendered on the server and do not require client-side JavaScript for rendering. 
+While Server Components and Client components can coexist in the same app, Server Components can import and render Client components.
+
+
+_________________________________________________________________________________
+
+15. What is Context in React?
+
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+ Context is primarily used when some data needs to be accessible by many components at different nesting levels.
+
+
+_____________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

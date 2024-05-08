@@ -1,0 +1,186 @@
+React is a JavaScript library for building user interfaces.
+
+React is used to build single-page applications.
+
+React allows us to create reusable UI components.
+
+React component is a js function that return markup.
+component can be a button or a entire page.
+Component name starts with capital letter.
+
+JSX lets you put markup into JavaScript.
+Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it.
+
+
+React creates a VIRTUAL DOM in memory.
+    -Instead of manipulating the browser's DOM directly,
+     React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+React only changes what needs to be changed!
+    -React finds out what changes have been made, and changes only what needs to be changed.
+
+REACT HISTORY 
+
+Current version of React.JS is V18.0.0 
+Facebook Software Engineer, Jordan Walke, created it.
+Current version of create-react-app is v5.0.1 (April 2022).
+create-react-app includes built tools such as webpack, Babel, and ESLint.
+
+-------------------------------------------------------------
+
+To use React in production, you need npm which is included with Node.js.
+
+npm i react@latest react-dom@latest  - to install latest version
+
+---------------------------------------------------------
+
+style={{}} is not a special syntax, but a regular {} object inside the style={ } JSX curly braces.
+You can use the style attribute when your styles depend on JavaScript variables.
+
+
+
+-----------------------------------------------
+
+Conditional rendering?
+
+The component will be rendered only when the condition is true.
+
+eg : if condition ,
+ ternary condition 
+
+ {isLoggedIn ? (
+    <AdminPanel />
+  ) : (
+    <LoginForm />
+  )}
+ 
+ , && - {isLoggedIn && <AdminPanel />}.
+
+ ---------------------------------------------------
+
+Rendering lists?
+
+Using for loop or array map() function we can render list of components.
+
+eg: 
+
+const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+];
+
+const listItems = products.map(product =>
+  <li key={product.id}>
+    {product.title}
+  </li>
+);
+
+return (
+  <ul>{listItems}</ul>
+);
+
+or
+
+return(
+    <ul>
+        { products.map(product => 
+            <li key="{product.id}">{product.title}</li>
+        )}
+    </ul>
+    
+)
+
+key="{product.id}" - u should pass a string or number that uniquely identify that item amoung siblings.
+React uses your keys to know what happened if you later insert, delete, or reorder the items.
+
+------
+eg:
+
+const products = [
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
+
+export default function ShoppingList() {
+  const listItems = products.map(product =>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
+      {product.title}
+    </li>
+  );
+
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+-----
+
+here
+ style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+
+style takes object inside the { } , so 
+
+color: product.isFruit ? 'magenta' : 'darkgreen'  -  used js for color selection.
+
+
+-------------------------------------
+
+
+Responding to events ?
+
+
+Using event handlers we can respond to events.
+
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+
+in normal js - onClick= "handleClick()"
+but in react - onClick={handleClick}  - u dont need to call the function, react automatically call when  u click.
+
+---------------------------------------
+
+
+Updating the screen?
+
+import { useState } from 'react';
+
+const [count , setCount] = useState(0);
+
+function incrementBtnCount(){
+    setCount(count++);
+}
+
+
+function CountBtn(){
+
+    return(
+        <button onClick={incrementBtnCount} >Click</button>
+    )
+}
+
+
+------------------------------------------------
+
+
+Using Hooks?
+
+
+function starts with 'use' is hooks , u can create ur own hooks using existing one.

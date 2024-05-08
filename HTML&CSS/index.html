@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+
+    *{
+        color: black;
+    }
+        .parent{
+            height: 400px;
+            background-color: red;
+
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+
+            /* display: grid;
+            place-items: center; */
+           
+            position: relative;
+        }
+
+        .child{
+            
+            height: 200px;
+            width: 200px;
+            background-color: var(--balaji);
+            float: right;
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%); */
+
+            top:5%;
+            left:5%;
+            right:5%;
+            bottom:5%;
+
+            inset: 5%;
+        }
+
+        .child:nth-last-child(1){
+            float: left;
+        }
+
+        
+
+        input::placeholder{
+            color: red;
+        }
+
+        input[type="text"]{
+            color: green;
+        }
+
+        input:focus{
+            outline: 2px solid cyan;
+            background-color: yellow;
+        }
+
+        input[type="text"]:blur {
+            background-color: red;
+            }
+    </style>
+</head>
+<body >
+
+
+    <p class="d-lg-block d-none"></p>
+    <div class="parent">
+
+        <input type="text" name="" placeholder="First name" id="">
+        
+        <div class="child p-md-5 px-sm-4 d-sm-flex d-block">
+            first
+        </div>
+        <div class="col-12 col-sm-4 col-md-6 col-lg-8">
+            seciond
+        </div>
+    </div>
+
+
+    <p class="hellop" contenteditable="true">hello</p>
+
+    <div class=" d-block d-md-none">world</div>
+
+
+</body>
+</html>
+
+<script>
+
+</script>

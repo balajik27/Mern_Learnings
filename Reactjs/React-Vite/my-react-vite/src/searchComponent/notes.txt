@@ -1,0 +1,10 @@
+1. what user entered =>  useState hook
+2. fetch data from external api when user enter some input
+3. now when i type anything it fetch all the data from backend and we filter in frontend
+    but in realtime , when we enter data , in backend it filter and gives the relavent data
+4. <div key={index}>{result.name}</div>  , must have key if u use any element inside map().
+
+
+learn about:
+
+debounce

@@ -1,0 +1,226 @@
+1. What is the purpose of the <!DOCTYPE> declaration in HTML?
+
+<!DOCTYPE html> - HTML5 - 2014
+
+<audio>
+<video>
+
+<header>, <footer>, <nav>, <article>, <section>, and <aside> - sematic tag or element
+
+<img src="" alt="">
+
+HTML 4.01
+XHTML 1.0
+
+<html> - HTML4
+</html>
+
+<img src="" alt="" /> - trailing slash
+<img src="" alt=""></img>
+
+
+
+2. Inline and Block level elements
+
+ block level - new line and occupy the full width available to them
+    <p>hello</p>
+    <h1>hello</h1>
+    <div>hello</div>
+    <center></center>
+
+
+Inline level - occupies the space only for the content
+    <span>hello</span><br>
+    <img height="500px" width="600px" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+    <input type="text" name="" id="">
+    <strong>Balaji</strong>
+   
+3. semantic elements
+
+<header>
+    ...
+</header>
+   
+<!-- this is main coneen -->
+<main>
+    <section>
+
+    </section>
+
+    <section>
+        
+    </section>
+
+    <section>
+
+    </section>
+</main>
+
+
+<footer>
+    footer....
+</footer>
+
+3. without css , how to center content
+
+<center></center>
+
+4. How do you create a hyperlink or link in HTML?
+
+ <a href=""></a> - anchor element or tag.
+
+ 5. What is the purpose of the alt attribute in an <img> tag?
+
+ alt , href , type , src - attribute 
+ img , input - element or img.
+
+ 6. What is the purpose of the <meta> tag in HTML?
+
+ The <meta> tag is placed within the <head> section of an HTML document and does not have a closing tag. It provides essential information
+  to browsers, search engines, and other web services about the document's content and behavior.
+
+ <meta charset="UTF-8"> - character set covers all characters and symbols that exist
+ <meta> tag in HTML is used to provide metadata about the HTML document.
+
+ metadata  - data about data
+
+ Data - Book.
+ Metadata - author, date created, date modified, and file size.
+
+
+ 7. How do you embed a video in HTML?
+
+ <video width="width" height="height" controls>
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+video tag - width , height , controls
+source - src - filename , type 
+
+8. 
+used to change the appearance or behavior of an HTML element. 
+
+9. generic(global) attribute - class , id
+  specific attribute - href , src - specific to the tag.
+--------------------------------------------------------
+
+1. What is the difference between inline, internal, and external CSS?
+
+2. Explain the CSS box model.
+
+3. What are pseudo-classes in CSS? Provide examples.
+
+ - added to selectors that specify a special state of the selected elements.
+ - style elements based on user interaction.
+
+
+4. How do you center an element horizontally and vertically using CSS? (important)
+
+
+
+5.  variables in CSS?
+
+  variables or custom properties , :root pseudo class ,  select the root element of the document, define global CSS variables or set default values for CSS properties.
+
+  :root(selects <html> tag) pseudo-class have a global scope and can be accessed from anywhere in the CSS document.
+  :root{
+      --primary-color : blue;
+  }
+
+  .newclass{
+      --secondary-color : red;
+  }
+
+  .newclass - if this class applied to any element then that variables can be used for that element.
+  using js , class can be toggled for any element.
+
+
+6.
+
+Absolute Units
+
+mm (millimeters)
+cm (centimeters): 10mm makes 1cm
+in (inches): 2.54cm makes 1in
+pt (points): 1/72in makes 1pt
+pc (picas) – 12pt makes 1pc
+px (pixel)– 0.75pt makes 1px
+
+Relative Units- relative units are not fixed. Their values are "relative" to another value.
+% (percentage): relative to the size of the parent element
+em (font size): relative to the size of the font
+rem (root em): relative to the font size of the root element
+vw (viewport width): relative to the width of the viewport
+vh (viewport height): relative to the height of the viewport
+
+
+7. void element is an element that contains no content and does not have a closing tag.
+----------------------------------------------------------
+
+Specificity - priority
+
+
+inline - 1000
+internal
+
+id - 100
+class - 10
+nasted - ul li a - 3
+tag - 1
+universal - 0
+
+
+DOM - represents the structure of HTML - hierarchical tree-like structure - dynamically  access, manipulate, and update the content,
+
+getElementById
+getElementByClassName
+getElementByTagName
+querySelector
+querySelectorAll
+
+
+HOW TO CENTER DIV WITHOUT , FLEX , GRID , ALIGN-CENTER CSS , CENTER TAG , ALIGN = "CENTER" ATTRIBUTE.
+
+
+Float - floated to the left or right within its containing element,
+
+
+col-12 - 0 - 1444 , mobile , sm ,md lg , xl 
+col-sm-4 - 576 < 768  < 1444 ,  sm ,md lg , xl 
+col-md-6 - 768 < 1444  md , lg , xl 
+col-lg-4 - lg , xl 
+
+
+<div class="container">
+    <div class="col-sm-6"></div> mobile, sm , md , lg , xl , xxl
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6"></div>
+</div>
+   
+
+shorthand - Specify Multiple related properties using a single declaration.
+
+padding : forall
+padding : top/bottom left/right
+padding : top left/right bottom
+padding : top bottom 
+
+
+Shorthand property that allows you to set multiple background properties for an element in one declaration.
+
+background : color , image , repeat , position / size .
+
+px-4 - top / bottom 
+
+px-lg-4 - lg , xl.
+px-5- mobile , sm , md.
+pt-4 - pb -4.
+
+give me utility class for padding top and bottom 4 that applies only desktop.
+
+give me utility classes that displys the content only in dektop.
+<p class="d-lg-block d-none">Hello world</p>
+
+

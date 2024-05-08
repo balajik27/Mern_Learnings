@@ -1,0 +1,24 @@
+.searchCity{
+    width: 500px;
+    border: 1px solid #000;
+}
+.searchCity:focus{
+    outline: none;
+}
+.searchBoxCity{
+    position: sticky;
+    top: 20px;
+}
+
+.cityRow:hover{
+    background-color: rgb(230, 230, 230);
+}
+.cityLink{
+    color: #000;
+    display: table-cell;
+    border-bottom: 1px solid #e6e6e6;
+}
+.cityLink:hover{
+    color: blue;
+    text-decoration: underline !important;
+}
