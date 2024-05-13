@@ -1,0 +1,32 @@
+Step 1 :
+
+export const StoreContext = createContext();
+
+Step 2 :
+
+put the props inside object
+const state = {
+    user , 
+    users,
+    setUser
+  }
+
+<StoreContext.Provider value={state}>
+    <Context1 />
+</StoreContext.Provider>
+
+
+value <- default parameter , pass props
+
+step 3 :
+
+
+import this where u want to use that props
+
+import { StoreContext } from '../App'; 
+
+step 4:
+
+const user = useContext(StoreContext);
+
+onClick={()=>user.setUser(user.user=='Jesse Hall'? "Balaji": 'Jesse Hall')}

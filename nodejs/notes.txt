@@ -1,0 +1,57 @@
+Nodejs is js runtime environmnet. not a Framework.
+
+By using babel (used in both frontend and backend)
+    - it makes js suitable for Nodejs version(latest to older which can be understand by nodejs)
+    - can use latest language feature in js , even the nodejs version cannot understand 
+    - integrate with build in tools like webpack or gulp to automate the transpilation process.
+
+
+Then
+
+
+Nodejs converts js code to bytecode.
+
+To run js in server and not in browser we use Nodejs. 
+coz browser have default js engine , so we didnt install any JRE.
+
+But in server we dont have any js engine , so we use Nodejs as JRE , this uses the v8 js engine which is used in chrome browser.
+
+V8 engine parses, compiles, and executes the code.
+
+So therfore , V8 engine handles the conversion of JavaScript code into bytecode or machine code.
+
+V8 (used in Google Chrome and Node.js)
+SpiderMonkey (used in Mozilla Firefox)
+JavaScriptCore (used in Safari)
+
+Execution process:
+    - Parsing - create abstract syntax tree (AST)
+    - Compilation - compiles the AST into bytecode or machine code
+    - Execution - bytecode executed by js engine to get desired output.
+
+
+Node.js allows you to create server-side applications that can handle incoming requests,
+ perform various tasks (such as processing data, interacting with databases, or integrating with other services),
+ and send back responses to clients.
+
+
+Basically what we do:
+    
+    1. Create server
+    2. receive and handle requests
+    3. Send response
+
+Sample Implementation: 
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello, World!\n');
+});
+
+const PORT = process.env.PORT || 3000;
+    server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+

@@ -1,0 +1,12 @@
+Closure is created whenever a function returns another function and that returned function retains 
+access to variables in its lexical scope, even after the outer function has finished executing.
+
+The purpose of using closures is to create functions with access to variables from their containing (enclosing)
+ scope without needing to explicitly pass those variables as arguments every time the function is called.
+
+ The key aspect is that the inner function retains access to variables from its containing (enclosing) scope, forming a closure.
+
+ Usually Closure returns the anonymous function , but we can return named function also. but main purpose is to
+ make that inner function access to its lexical scope variables, even after the outer function has finished executing.
+
+ 

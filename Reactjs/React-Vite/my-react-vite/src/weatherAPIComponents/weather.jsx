@@ -5,9 +5,9 @@ import WeatherForecast from "./weatherForecast";
 
 import { BrowserRouter  as Router , Routes , Route } from 'react-router-dom'
 
-
-
 import '../assets/css/weather.css';
+import '../assets/css/mediaQuery.css';
+
 export default function Weather(){
 
 

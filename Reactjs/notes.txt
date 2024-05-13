@@ -184,3 +184,114 @@ Using Hooks?
 
 
 function starts with 'use' is hooks , u can create ur own hooks using existing one.
+
+
+-----------------------------
+
+To learn
+
+React flow and structure
+why u need hooks and project
+virtual dom , fibre , reconciliation
+tailwind
+react interview ques on counter
+useref , useeffect , usecallback in 1 project
+custom hook
+contextapi with local storage
+appwrite backend for react
+
+lazy load
+memory leakage handling
+SSr , CSr , ISR
+jest and React Testing Library
+Material UI
+Playwright
+
+Improve react:
+
+use types - prop-types
+fetch data progressively - React.lazy()
+
+
+Bruno instead of postman
+
+
+know about : Docker , Elixir, Electron. 
+
+Hooks
+
+useContext
+useReducer
+
+Carousel 
+
+Tools : webpack , enzyme , redux , flux
+
+
+JS:
+
+prototyping, event bubbling, AJAX, and adherence to the ECMAScript specification.
+map() , filter() , find() , reduce()
+set()
+dynamic object keys
+optional chaining
+
+
+React Basics:
+
+component structure, state management, and JSX syntax
+
+create-react-app is a CLI tool for creating single-page React applications.
+Grasp concepts like virtual DOM and how React manipulates the DOM.
+
+JSX (JavaScript Syntax Extension)
+
+Props:
+States and setState:
+useState Hook:
+Handling Functions in React:
+Handling JSX Events:
+Conditional Rendering:
+Component Lifecycle Methods:
+
+Advanced React Topics
+
+Debugging and Logging - React DevTools extension,
+HTTP Requests (GET and POST) - how to make AJAX and REST API calls using JavaScript’s fetch function
+Browser’s Local Storage
+Handling Errors in React - especially during REST API calls, and provide meaningful notifications in your UI.
+Create a Custom Hook
+
+React Libraries
+
+Axios HTTP Library
+Redux Library for State Management
+React Router Library for Routing
+Styling with UI Libraries -  Bootstrap CSS, Chakra UI, Material UI, and Ant Design
+Form Handling Libraries - Formik , React Hook Form
+
+General Development Skills
+
+
+
+
+GIT : 
+
+Git is easy to learn when you focus on a few basic things like,
+
+How to initiate a repository
+How to stage/unstage your changes
+How to commit your changes to the repo
+How to push to the remote repository
+How to resolve merge conflicts?
+
+ Reconciliation Process in React
+
+ Advanced React Developer
+
+  Lazy Loading in React
+ Portals in React
+ Theming in React
+ Patterns in React
+  Anti-Patterns in React
+  

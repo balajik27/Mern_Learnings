@@ -3,6 +3,7 @@ import axios from "axios"
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 
+import {CityNotFound} from './cityNotFound'
 import Loader from "./loader";
 import LoadingCompleted from "./loadCompleted.jsx";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -13,6 +14,7 @@ const WeatherCityListTable = ({searchCity})=>{
     
     const [cityData , setCityData] = useState([]);
     const [hasMore , setHasmore] = useState(true);
+ 
     // axios.get('https://public.opendatasoft.com/explore/dataset/geonames-all-cities-with-a-population-1000/api/?disjunctive.cou_name_en&sort=name')
 
     useEffect(()=>{
@@ -49,9 +51,7 @@ const WeatherCityListTable = ({searchCity})=>{
     const finalData = cityData.filter((item)=>{
         return item.ascii_name && item.ascii_name.toLowerCase().indexOf(searchCity.toLowerCase()) == 0
     })
-  
 
-  
 
     return(
         <>
@@ -60,9 +60,9 @@ const WeatherCityListTable = ({searchCity})=>{
             dataLength={cityData.length}
             next={fetchMoreData}
             hasMore={hasMore}
-            loader={<Loader />}
-            endMessage={<LoadingCompleted />}
-
+            // loader={<Loader />}
+            loader={finalData.length? <Loader /> :  <CityNotFound />}
+            endMessage={finalData.length? <LoadingCompleted /> :  <CityNotFound />}
             >
         <table className="table border" >
             <thead>
@@ -78,8 +78,6 @@ const WeatherCityListTable = ({searchCity})=>{
 
 
                 {finalData && finalData.map((item , index)=>{
-
-                // console.log(item.ascii_name)
                     return(
                     <tr key={index} className="cityRow">
                         <td>{index + 1}</td>

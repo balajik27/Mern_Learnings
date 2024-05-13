@@ -1,0 +1,9 @@
+@media (min-width:300px) and (max-width:420px) {
+    .searchCity{
+        width: 100%;
+    }
+    .loading_img{
+       
+        height: 233px;
+    }
+}
